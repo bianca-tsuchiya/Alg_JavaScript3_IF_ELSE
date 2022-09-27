@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF-ELSE</h1>
+    <h2>Exercício 1</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 08/09/2022</h6>
+    <br>
+    <p>Digite o nome do(a) aluno(a):</p>
+    <input id="input_nome">
+    <br><br>
+    <p>Digite a idade do(a) aluno(a):</p>
+    <input type="number" id="input_idade">
+    <br><br>
+    <button onclick="avaliar_aluno()">Avaliar Aluno</button>
+    <br><br>
+    <div id="div_resultado_avaliacao"></div>
+</body>
+</html>
+
+<script>
+function avaliar_aluno(){
+    var idade = Number(input_idade.value)
+    var porcent_idade = (100*idade)/18
+
+    if(idade>=18)
+    {
+        div_resultado_avaliacao.innerHTML = `${input_nome.value}, vamos tirar a CNH?`
+    }
+    else{
+        div_resultado_avaliacao.innerHTML = `${input_nome.value}, você possui ${porcent_idade.toFixed(1)}% da idade necessária para tirar a CNH, vá jogar Playstation!`
+    }
+}
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF-ELSE</h1>
+    <h2>Exercício 4</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 08/09/2022</h6>
+    <br>
+    <p>Digite o valor da pizza: </p>
+    <input type="number" id="input_valor_pizza">
+    <br><br>
+    <p>Digite a quantidade de amigos reunidos:</p>
+    <input type="number" id="input_qtd_amigos">
+    <br><br>
+    <p>Digite o valor máximo de pagamento desejável por amigo: </p>
+    <input type="number" id="input_valor_max">
+    <br><br>
+    <button onclick="calcular_valor_amigo()">Rola a pizza?</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function calcular_valor_amigo(){
+    var valor_pizza_amigo = Number(input_valor_pizza.value) / Number(input_qtd_amigos.value)
+
+    var frase_deu_ruim = "<br> Deu ruim! Pizza muito cara!"
+    var frase_uhu = "<br> Uhu! Vamos pedir pizza!"
+    var resultado_valor_amigo = `Cada amigo vai pagar ${valor_pizza_amigo.toLocaleString("pt-BR", {style: "currency", currency:"BRL", maximumFractionDigits: 2})} pela pizza`
+
+    var valor_max = Number(input_valor_max.value)
+
+    if(valor_pizza_amigo>valor_max)
+    {
+        resultado_valor_amigo += frase_deu_ruim
+    }
+    else{
+        resultado_valor_amigo += frase_uhu
+    }
+
+    div_resultado.innerHTML = resultado_valor_amigo
+    }
+    
+</script>

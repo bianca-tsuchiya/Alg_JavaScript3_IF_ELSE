@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF-ELSE</h1>
+    <h2>Exercício 6</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 08/09/2022</h6>
+    <br>
+    <p>Digite a temperatura ambiente:</p>
+    <input type="number" id="input_temperatura">
+    <br><br>
+    <button onclick="verificar_clima()">Verificar Clima</button>
+    <br><br>
+    <div id="div_resultado_clima"></div>
+</body>
+</html>
+
+<script>
+    function verificar_clima(){
+        var temperatura = Number(input_temperatura.value)
+
+        if(temperatura<10){
+            div_resultado_clima.innerHTML = 
+            `
+                <img src="https://www.segs.com.br/media/k2/items/cache/209b117273854dcb15603ba694762c04_XL.jpg" width="600px">
+            `
+        }
+        else{
+            div_resultado_clima.innerHTML = 
+            `
+                <img src="https://img.freepik.com/fotos-premium/alimentos-estragados-e-estragados-com-mofo-macas-pimentoes-queijo-duro-e-banan-em-fundo-cinza-close-up_130716-3092.jpg?w=2000" width="600px">
+            `
+        }
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF-ELSE</h1>
+    <h2>Exercício 7</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 08/09/2022</h6>
+    <br>
+    <p>Por quanto tempo, em minutos, o arroz ficou cozinhando?</p>
+    <input type="number" id="input_tempo_arroz">
+    <br><br>
+    <button onclick="provar_arroz()">Provar Arroz</button>
+    <br><br>
+    <div id="div_resultado_cozimento"></div>
+</body>
+</html>
+
+<script>
+    function provar_arroz(){
+        var tempo_cozimento = Number(input_tempo_arroz.value)
+
+        if(tempo_cozimento == 5)
+        {
+            div_resultado_cozimento.innerHTML =             
+            `
+                Parabéns! Arroz perfeito!
+                <br><br>
+                <img src="https://ncultura.pt/wp-content/uploads/2020/06/Arroz-blanco.jpg" width="600px">
+            `
+        }
+        else{
+            div_resultado_cozimento.innerHTML =             
+            `
+                Arroz cru ou cozido demais!
+                <br><br>
+                <img src="https://espacogourmet.meionorte.com/wp-content/uploads/2017/03/arroz-queimado-1110x400-1280x720.jpg" width="600px">
+            `
+        }
+    }
+</script>

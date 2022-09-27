@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF-ELSE</h1>
+    <h2>Exercício 2</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 08/09/2022</h6>
+    <br>
+    <p>Digite o valor do saldo da conta bancária:</p>
+    <input type="number" id="input_saldo">
+    <br><br>
+    <p>Digite o valor do débito:</p>
+    <input type="number" id="input_debito">
+    <br><br>
+    <button onclick="analisar_conta()">Analisar Conta</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+    <script>
+        function analisar_conta(){
+            saldo = Number(input_saldo.value)
+            debito = Number(input_debito.value)
+
+            saldo = saldo - debito
+
+            if(saldo<0)
+            {
+                div_resultado.innerHTML = `O saldo atual da conta corrente é <b style = "color: red;">${saldo.toLocaleString("pt-BR", {style: "currency", currency:"BRL", mximumFractionsDigits: 2})}</b>`
+            }
+            else{
+                div_resultado.innerHTML = `O saldo atual da conta corrente é <i style = "color: blue;">${saldo.toLocaleString("pt-BR", {style: "currency", currency:"BRL", mximumFractionsDigits: 2})}</i>`
+            }
+        }
+    </script>
